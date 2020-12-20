@@ -21,15 +21,19 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: 'newstudent',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'newstudent',
     pathMatch: 'full'
+  },
+  {
+    path: 'newstudent',
+    loadChildren: () => import('../pages/new-student/new-student.module').then( m => m.NewStudentPageModule)
   }
 ];
 
