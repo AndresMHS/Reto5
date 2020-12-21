@@ -5,13 +5,10 @@ import { Tab1Page } from './tab1.page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'newstudent',
-    pathMatch: 'full'
-  },
-  {
-    path: 'newstudent',
-    loadChildren: () => import('../pages/new-student/new-student.module').then( m => m.NewStudentPageModule)
+    component: Tab1Page,
   }
+  
+  
 ];
 
 @NgModule({

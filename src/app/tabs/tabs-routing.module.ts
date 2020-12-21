@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../pages/new-student/new-student.module').then(m => m.NewStudentPageModule)
       },
       {
         path: 'tab2',
@@ -21,19 +21,15 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'newstudent',
+        redirectTo: '/tabs/tab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: 'newstudent',
+    redirectTo: '/tabs/tab1',
     pathMatch: 'full'
-  },
-  {
-    path: 'newstudent',
-    loadChildren: () => import('../pages/new-student/new-student.module').then( m => m.NewStudentPageModule)
   }
 ];
 
